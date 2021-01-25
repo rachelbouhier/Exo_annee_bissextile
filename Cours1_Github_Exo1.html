@@ -7,14 +7,26 @@
 </head>
 <body>
     <script>
-        function my_is_leap (year)
-        if (year % 4 === 0) { 
-            result = "true"
-            
-        } else {result = "false"
-            
+        function my_is_leap (year) { 
+            let result; 
+            if (year % 4 === 0 && year % 100 !== 0) { 
+                result = "true";
+            }
+            else if (year % 4 === 0 && year % 100 === 0 && year % 400 === 0) { 
+                result = "true";
+            }
+            else { 
+                result = "false";
+            }
+
+            return result;
         }
 
+   
+        console.log(my_is_leap(2004));
+        console.log(my_is_leap(1900));
+
+  
     </script>
     
 </body>
